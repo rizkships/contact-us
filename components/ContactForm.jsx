@@ -7,9 +7,9 @@ export default function ContactForm(){
         </div>
         <div>
             <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder="Type your message here..."></textarea>
+            <textarea className="h-32" id="message" placeholder="Type your message here..."></textarea>
         </div>
-        <button type="submit">Send</button>
+        <button className="bg-green-700 py-3 text-white font-bold" type="submit">Send</button>
     </form>
 
     <div>
