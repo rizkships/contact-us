@@ -1,6 +1,6 @@
 export default function ContactForm(){
     return <>
-    <form>
+    <form className="py-4 mt-4 border-t flex flex-col gap-5">
         <div>
             <label htmlFor="fullname">Full Name</label>
             <input type="text" id="fullname" placeholder="john doe"></input>
