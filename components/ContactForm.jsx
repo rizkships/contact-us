@@ -6,14 +6,14 @@ export default function ContactForm(){
             <input type="text" id="fullname" placeholder="john doe"></input>
         </div>
         <div>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Your Message</label>
             <textarea className="h-32" id="message" placeholder="Type your message here..."></textarea>
         </div>
         <button className="bg-green-700 py-3 text-white font-bold" type="submit">Send</button>
     </form>
 
-    <div>
-        <div>Error message</div>
+    <div className="bg-slate-100 flex flex-col">
+        <div className="text-red-500 px-5 py-2">Error message</div>
     </div>
     </>
 }
