@@ -1,9 +1,16 @@
+'use client';
+import { useState } from "react"
+
 export default function ContactForm(){
+    const [fullname, setFullname] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
     return <>
     <form className="py-4 mt-4 border-t flex flex-col gap-5">
         <div>
             <label htmlFor="fullname">Full Name</label>
-            <input type="text" id="fullname" placeholder="john doe"></input>
+            <input onChange={(e) => setFullname(e.target.value)} value={fullname} type="text" id="fullname" placeholder="john doe"></input>
         </div>
         <div>
             <label htmlFor="message">Your Message</label>
