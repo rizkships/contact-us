@@ -13,6 +13,16 @@ export default function ContactForm(){
             <input onChange={(e) => setFullname(e.target.value)} value={fullname} type="text" id="fullname" placeholder="john doe"></input>
         </div>
         <div>
+          <label htmlFor="email">Email</label>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            type="text"
+            id="email"
+            placeholder="john@gmail.com"
+          />
+        </div>
+        <div>
             <label htmlFor="message">Your Message</label>
             <textarea className="h-32" id="message" placeholder="Type your message here..."></textarea>
         </div>
