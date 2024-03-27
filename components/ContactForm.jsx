@@ -24,7 +24,8 @@ export default function ContactForm(){
         </div>
         <div>
             <label htmlFor="message">Your Message</label>
-            <textarea className="h-32" id="message" placeholder="Type your message here..."></textarea>
+            <textarea onChange={(e) => setMessage(e.target.value)}
+            value={message} className="h-32" id="message" placeholder="Type your message here..."></textarea>
         </div>
         <button className="bg-green-700 py-3 text-white font-bold" type="submit">Send</button>
     </form>
