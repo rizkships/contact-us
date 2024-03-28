@@ -6,8 +6,12 @@ export default function ContactForm(){
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return <>
-    <form className="py-4 mt-4 border-t flex flex-col gap-5">
+    <form onSubmit={handleSubmit} className="py-4 mt-4 border-t flex flex-col gap-5">
         <div>
             <label htmlFor="fullname">Full Name</label>
             <input onChange={(e) => setFullname(e.target.value)} value={fullname} type="text" id="fullname" placeholder="john doe"></input>
