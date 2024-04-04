@@ -6,6 +6,7 @@ export default function ContactForm(){
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [error, setError] = useState([])
+    const [success, setSuccess] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -21,8 +22,14 @@ export default function ContactForm(){
                 message,
             })
         })
-        const {msg} = await res.json();
+        const {msg, success} = await res.json();
         setError(msg)
+        setSuccess(success)
+        if (success) {
+            setFullname("")
+            setEmail("")
+            setMessage("")
+        }
     }
 
     return <>
