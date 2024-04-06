@@ -59,9 +59,10 @@ export default function ContactForm(){
     <div className="bg-slate-100 flex flex-col">
         {
             error && error.map((e)=> (
-                <div className="text-red-500 px-5 py-2">{e}</div>
+                <div className={`${success ? "" : "text-red-500 px-5 py-2"}`}>{e}</div>
             ))
         }
+        {/* text-green-800 */}
         
     </div>
     </>
